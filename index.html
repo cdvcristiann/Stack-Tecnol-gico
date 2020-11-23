@@ -43,6 +43,7 @@
                               <option value="Terminado">Terminado</option>
                               <option value="En proceso">En proceso</option>
                               <option value="Muy Importante">Muy Importante</option>
+                              <option value=""></option>
                             </select>
                           </div>
                         </div>
@@ -79,14 +80,18 @@
                                 <span v-else-if="n.Estado==='En proceso'" >
                                   <progress class="progress is-small is-primary" max="100">15%</progress>{{n.Estado}} 
                                 </span>
-                                <span v-else class="tag is-danger">{{n.Estado}}</span>
+                                <span v-else-if="n.Estado==='Muy Importante'" class="tag is-danger">{{n.Estado}}</span>
+                                <span v-else-if="n.Estado===''" >
+                                  <progress class="progress is-small is-primary" max="100">15%</progress>{{n.Estado}}En Proceso
+                                </span>
                               </td> 
                               <td>
                                 <div class="buttons has-addons">
                                     <button class="button" @click="editarNotas(index)">Editar</button>
                                     <button v-if="n.Estado==='Terminado'" class="button is-danger is-selected" @click="eliminarNotas(n.id)">Eliminar</button>
                                     <button v-else-if="n.Estado==='En proceso'" class="button is-danger is-selected" @click="eliminarNotasProcesos(n.id)">Eliminar</button>
-                                    <button v-if="n.Estado==='Muy Importante'" class="button is-danger is-selected" @click="eliminarNotas(n.id)">Eliminar</button>
+                                    <button v-else-if="n.Estado==='Muy Importante'" class="button is-danger is-selected" @click="eliminarNotas(n.id)">Eliminar</button>
+                                    <button v-else  class="button is-danger is-selected" @click="eliminarNotasProcesos(n.id)">Eliminar</button>
                                 </div>
                               </td>                            
                             </tr>
