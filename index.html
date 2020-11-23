@@ -11,13 +11,10 @@
     <div id="appNotas" class="margen_columna">
         <section class="hero">
             <div class="hero-body">
-              <div class="container">
+              <div class="container"  id="centrar">
                 <h1 class="title">
                   Gestion de Tareas
                 </h1>
-                <h2 class="subtitle">
-                  Tareas
-                </h2>
               </div>
             </div>
         </section>
@@ -27,12 +24,12 @@
                     <div class="hero-body">
                       <div class="container">
                         <h2 class="subtitle">
-                        Formular Notas
+                        Formular Tareas
                         </h2>
                         <div class="field">
-                            <label class="label">Notas</label>
+                            <label class="label">Tareas</label>
                             <div class="control">
-                                <input class ='input' type='text' placeholder='Ingrese la Nota' v-model='notas_txt' v-on:keyup.enter="AgregarNotas()">
+                                <input class ='input' type='text' maxlength="80" placeholder='Ingrese la tarea' v-model='notas_txt' v-on:keyup.enter="AgregarNotas()">
                             </div>
                         </div>
                     <div class="field">

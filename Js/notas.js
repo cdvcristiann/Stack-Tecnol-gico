@@ -12,8 +12,7 @@ new Vue({
         }
     },
 
-      methods:{
-		
+    methods:{		
         eliminarNotasProcesos: function (notas_id) {            
             eliminar = confirm("Desea Eliminar la Nota")            
             if (eliminar==true) {          
@@ -23,10 +22,7 @@ new Vue({
 
         eliminarNotas: function (notas_id) {
                 let index = this.lista_notas.findIndex(e => e.id=== notas_id);
-                this.lista_notas.splice(index, 1) },
-    
-            
-            
+                this.lista_notas.splice(index, 1) },            
         
         buscaNotas: function (valor) {
             this.lista_notas = this.lista_notas.filter((value) => {
@@ -36,6 +32,7 @@ new Vue({
             }
           )
         },
+
         AgregarNotas: function(){
             var notas = {
                 'id' : this.lista_notas.length,
