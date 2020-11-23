@@ -49,6 +49,9 @@ new Vue({
             if (estado==true) {
                 terminado="Terminado"
             this.lista_notas[index].Estado = terminado;}
+            else{
+              proceso="En proceso"
+            this.lista_notas[index].Estado = proceso}
         }
 		
 		
