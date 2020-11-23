@@ -45,6 +45,10 @@ new Vue({
         editarNotas: function(index){
             entrada= prompt("modifique la nota:")
             this.lista_notas[index].notas = entrada;
+            estado = confirm("¿marcar como Terminado?")
+            if (estado==true) {
+                terminado="Terminado"
+            this.lista_notas[index].Estado = terminado;}
         }
 		
 		
