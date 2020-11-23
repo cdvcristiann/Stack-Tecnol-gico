@@ -40,7 +40,7 @@ pip install Django
 
 una vez instalado queda por correr el servidor de la siguiente manera.
 ●estando todavia en la consola: python manage.py runserver ejecutamos el servidor.
-●el navegador copiamos el ip o ponemos localhost:8000.
+●el navegador ponemos http://127.0.0.1:8000/Gestor/
 
 Otra alternativa es descargar los archivos del repositorio(Stack-Tecnol-gico) https://github.com/cdvcristiann/Stack-Tecnol-gico.git.
 Una de las maneras, es clonar el repositorio en una Carpeta y hacer doble chick en el archivo index.html. para clonar debe abrir GIT BASH O SIMBOLO DE SISTEMA, o desde la carpeta hacer click derecho y abrir git bash (si tiene git instalado), escribir en la consola, git clone https://github.com/cdvcristiann/Stack-Tecnol-gico.git  y enter.
