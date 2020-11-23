@@ -27,13 +27,25 @@ una confirmación al usuario para validar la operación de
 borrado.
 
 DETALLES DE USO
-Para poder correrlo en la computadora una vez descargado y descomrimido, simplemente debe hacer click en el archivo index.html y ya lo tendras ejecutando en tu navegador.
+Para poder correrlo en la computadora desde el cmd(simbolo de sistema) hay que crear un entorno para instalar los requerimientos.
+primeramente hay que abrir la consola, cmd(simbolo de sistema),
+para crear un entorno nuevo:  python -m venv nombre_entorno 
+
+●Para activar el entorno creado: nombre_entorno\Scripts\activate.bat
+
+Una vez creado y activado el entorno queda por instalar los requerimientos,de igual manera hay un bloc de notas(requirements.txt) con los requerimientos.
+
+●Para instalar Django en el entorno creado
+pip install Django
+
+una vez instalado queda por correr el servidor de la siguiente manera.
+●estando todavia en la consola: python manage.py runserver ejecutamos el servidor.
+●el navegador copiamos el ip o ponemos localhost:8000.
 
 Otra alternativa es descargar los archivos del repositorio(Stack-Tecnol-gico) https://github.com/cdvcristiann/Stack-Tecnol-gico.git.
 Una de las maneras, es clonar el repositorio en una Carpeta y hacer doble chick en el archivo index.html. para clonar debe abrir GIT BASH O SIMBOLO DE SISTEMA, o desde la carpeta hacer click derecho y abrir git bash (si tiene git instalado), escribir en la consola, git clone https://github.com/cdvcristiann/Stack-Tecnol-gico.git  y enter.
-Luego ir al archivo index.html y hacer doble click y ya podra usar.
-
-Otra alternativa de correrlo en la computadora es ir a la pagina https://github.com/cdvcristiann/Stack-Tecnol-gico, luego en la parte derecha hay un boton verde llamado Code, hacer click, dirigirse a Download Zip. Descomprir el archivo en una carpeta, una vez descargado buscar el archivo index.html y hacer doble click
+Desde ahi queda por seguir los pasos anteriores.
+Otra alternativa de correrlo en la computadora es ir a la pagina https://github.com/cdvcristiann/Stack-Tecnol-gico, luego en la parte derecha hay un boton verde llamado Code, hacer click, dirigirse a Download Zip. Descomprir el archivo en una carpeta,y seguir los pasos anteriores.
 
 
 

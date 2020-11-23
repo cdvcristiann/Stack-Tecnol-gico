@@ -1,5 +1,6 @@
 new Vue({
-    el: "#appNotas",
+    el: "#appNotas",    
+    delimiters:['{$','$}'],
     data:{
         notas_txt: "",
         Estado:"",
@@ -12,7 +13,15 @@ new Vue({
         }
     },
 
-    methods:{		
+    methods:{
+        BuscarApi: function(buscar_txt){
+            var self = this;
+            axios.get("http://127.0.0.1:8000/Gestor/")
+            .then(function(response){
+                self.lista_notas = response.data
+            })
+        },
+
         eliminarNotasProcesos: function (notas_id) {            
             eliminar = confirm("Desea Eliminar la Nota")            
             if (eliminar==true) {          
@@ -53,11 +62,11 @@ new Vue({
               proceso="En proceso"
             this.lista_notas[index].Estado = proceso}
         }
-		
-		
-  		
-		},
-		
-		
+        
+        
+        
+        },
+        
+        
     
     })
