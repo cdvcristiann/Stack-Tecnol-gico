@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bulma.min.css">
+    <link rel="stylesheet" href="Css/estilos.css">
+    <title>Gestion de Tareas</title>
+</head>
+<body>
+    <div id="appNotas" class="margen_columna">
+        <section class="hero">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                  Gestion de Tareas
+                </h1>
+                <h2 class="subtitle">
+                  Tareas
+                </h2>
+              </div>
+            </div>
+        </section>
+        <div class="columns">
+            <div class="column">
+                <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h2 class="subtitle">
+                        Formular Notas
+                        </h2>
+                        <div class="field">
+                            <label class="label">Notas</label>
+                            <div class="control">
+                                <input class ='input' type='text' placeholder='Ingrese la Nota' v-model='notas_txt' v-on:keyup.enter="AgregarNotas()">
+                            </div>
+                        </div>
+                    <div class="field">
+                        <label class="label">Estado</label>
+                        <div class="control">
+                          <div class="select">
+                            <select v-model="Estado">
+                              <option value="Terminado">Terminado</option>
+                              <option value="En proceso">En proceso</option>
+                              <option value="Muy Importante">Muy Importante</option>
+                            </select>
+                          </div>
+                        </div>
+                    </div>
+                    <button @click="AgregarNotas()" class="button is-info">Agregar</button>
+                      </div>
+                    </div>                    
+                </section>                  
+            </div>
+
+          <div class="column">
+              <section class="hero">
+                  <div class="hero-body">
+                    <div class="container">
+                      <h2 class="subtitle">
+                      Lista de Tareas
+                      </h2>
+                    </div>
+                    <div class="field">
+                    <div class="control">
+                      <input class="input is-primary" type="text" placeholder="Buscar Notas" v-model="buscar_txt">
+                    </div>
+                    </div>
+                      <table class="table">
+                          <thead>
+                              <th>Notas</th>
+                              <th>Estado</th>
+                              <th>Acciones</th>
+                          </thead>
+                          <tbody>
+                            <tr v-for=" (n,index) of lista_notas " >
+                              <td>{{index}}-{{n.notas}} </td>
+                              <td><span v-if="n.Estado==='Terminado'" class="tag is-primary">{{n.Estado}}</span>
+                                <span v-else-if="n.Estado==='En proceso'" >
+                                  <progress class="progress is-small is-primary" max="100">15%</progress>{{n.Estado}} 
+                                </span>
+                                <span v-else class="tag is-danger">{{n.Estado}}</span>
+                              </td> 
+                              <td>
+                                <div class="buttons has-addons">
+                                    <button class="button" @click="editarNotas(index)">Editar</button>
+                                    <button v-if="n.Estado==='Terminado'" class="button is-danger is-selected" @click="eliminarNotas(n.id)">Eliminar</button>
+                                    <button v-else-if="n.Estado==='En proceso'" class="button is-danger is-selected" @click="eliminarNotasProcesos(n.id)">Eliminar</button>
+                                    <button v-if="n.Estado==='Muy Importante'" class="button is-danger is-selected" @click="eliminarNotas(n.id)">Eliminar</button>
+                                </div>
+                              </td>                            
+                            </tr>
+                          </tbody>                          
+                      </table>
+                  </div>
+              </section>
+          </div>         
+        </div>
+    </div>
+     
+    <script type="text/javascript" src=" Js/vue@2.js"></script>
+    <script type="text/javascript" src=" Js/notas.js"></script>
+
+</body>
+</html>
