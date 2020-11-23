@@ -13,16 +13,18 @@ marcar el estado de la tarea
 ● Cuando se pulsa el botón, la tarea se marca como terminada y
 se muestra visualmente.
 
-EL USUARIO PODRA BORRAR O EDITAR LAS TAREAS
-● El sistema muestra un campo de texto donde ingresar la
-descripción de la tarea
-● Al presionar enter, una vez escrita la descripción, la tarea se
-crea y se agrega al listado de tareas en proceso
-
-EL USUARIO PODRA BORRAR O EDITAR LAS TAREAS
+EL USUARIO PODRA BUSCAR TAREAS CON UN CAMPO DE BUSQUEDA
 ● El sistema muestra un campo de busqueda, donde puede buscar sus tareas
 ● Al presionar enter, una vez escrita la busqueda, la tarea se muestra en el listado
 
+EL USUARIO PODRA BORRAR O EDITAR LAS TAREAS
+● Cada entrada del listado de tareas muestra un botón para
+borrar la tarea
+● Cuando se pulsa el botón, la tarea se borra y desaparece del
+listado.
+● Si la tarea no estaba terminada, al pulsar el botón se muestra
+una confirmación al usuario para validar la operación de
+borrado.
 
 DETALLES DE USO
 Para poder correrlo en la computadora, simplemente debe descargar los archivos de este repositorio(Stack-Tecnol-gico).
