@@ -27,7 +27,7 @@ una confirmación al usuario para validar la operación de
 borrado.
 
 DETALLES DE USO
-Para poder correrlo en la computadora una vez descargado, simplemente debe hacer click en el archivo index.html y ya lo tendras ejecutando en tu navegador.
+Para poder correrlo en la computadora una vez descargado y descomrimido, simplemente debe hacer click en el archivo index.html y ya lo tendras ejecutando en tu navegador.
 
 Otra alternativa es descargar los archivos del repositorio(Stack-Tecnol-gico) https://github.com/cdvcristiann/Stack-Tecnol-gico.git.
 Una de las maneras, es clonar el repositorio en una Carpeta y hacer doble chick en el archivo index.html. para clonar debe abrir GIT BASH O SIMBOLO DE SISTEMA, o desde la carpeta hacer click derecho y abrir git bash (si tiene git instalado), escribir en la consola, git clone https://github.com/cdvcristiann/Stack-Tecnol-gico.git  y enter.
